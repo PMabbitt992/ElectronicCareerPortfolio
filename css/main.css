@@ -161,21 +161,6 @@ footer a {
     padding: 0px 5px;
 }
 
-/* Description List */
-/* font color, styles, spacing, and alignment */
-dl {
-    color: white;
-    margin: auto;
-    text-align: center;
-}
-
-dt {
-    font-style: italic;
-}
-
-dd {
-    display: inline;
-}
 
 /* Nav */
 /* Navigation list font, font color, background color, spacing, box shadow, flexbox style, and gradient for link text */
@@ -215,31 +200,24 @@ nav li {
 
 /*Overlay Text */
 /* Text styles for text whithin the image overlay, setting the gradient color, position, and font size (including specific sizes for overlays with ids) */
-.text {
+.text,
+li {
     font-size: 20px;
-    position: absolute;
-    top: 37%;
-    left: 51%;
-    transform: translate(-50%, -40%);
+    width: 45%;
+    margin: auto;
     color: rgb(0, 230, 219);
     background: -webkit-linear-gradient(rgb(0, 230, 161), rgb(0, 114, 207));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
-#mediumtext {
-    font-size: 18px;
-}
-
-#smalltext {
-    font-size: 17px;
-    left: 48%;
+.background {
+    background: white;
 }
 
 /* Images */
-/* Image underneath the overlays and teh one on the index, setting the position, spacing, shape, box shadow and hue */
+/* Image underneath the overlays and the one on the index, setting the position, spacing, shape, box shadow and hue */
 img {
     display: block;
     width: 100%;
@@ -252,7 +230,7 @@ img {
     box-shadow: black 0 0 10px;
 }
 
-img#index {
+img.index {
     display: inline;
     border-radius: 5%;
     border: 10px dotted white;
@@ -263,45 +241,6 @@ img#index {
 
 
 
-
-/* Overlay Positioning */
-/* Div that contains all the componets for one overlay. Sets the position, spacing, color, and transition effect for the hover */
-.bubble {
-    position: relative;
-    max-width: 40em;
-    height: auto;
-    padding: 0;
-    margin: auto;
-}
-
-div.overlay {
-    position: absolute;
-    top: 55px;
-    right: -10px;
-    bottom: 10px;
-    left: 10px;
-    max-width: 40em;
-    max-height: 40em;
-    border-radius: 50%;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    opacity: 0;
-    -webkit-transition: 0.6s;
-    -moz-transition: 0.6s;
-    transition: 0.6s;
-    vertical-align: middle;
-
-}
-
-/* When the mouse hovers over the image, text and the overlay will appear */
-.overlay#one:hover,
-.overlay#two:hover,
-.overlay#three:hover,
-.overlay#four:hover,
-.overlay#five:hover {
-    opacity: 1;
-}
-
 /* Media: Phone */
 /* For the phone, the article will take up more space, with the nav as a column instead of a row, as well as different positions and sizes for each of the texts in the overlay */
 @media only screen and (max-width: 480px) {
@@ -309,9 +248,6 @@ div.overlay {
         width: 90%;
     }
 
-    .bubble {
-        margin-right: 15px;
-    }
 
     nav ul {
         -webkit-display: flex;
@@ -339,16 +275,10 @@ div.overlay {
         top: 36px;
     }
 
-    .text,
-    .text#mediumtext {
+    .text {
         font-size: 11px;
     }
 
-    .text#smalltext {
-        font-size: 10px;
-        top: 40%;
-        left: 47%;
-    }
 
 }
 
@@ -366,16 +296,10 @@ div.overlay {
         height: auto;
     }
 
-    .text,
-    .text#mediumtext {
+    .text {
         font-size: 15px;
     }
 
-    .text#smalltext {
-        font-size: 14px;
-        top: 40%;
-        left: 48%;
-    }
 }
 
 
