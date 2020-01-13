@@ -214,6 +214,9 @@ li {
 
 .background {
     background: white;
+    border-radius: 25%;
+    width: 65%;
+    margin: auto;
 }
 
 /* Images */
